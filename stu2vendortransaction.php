@@ -92,7 +92,7 @@ if($i<0){
     $msg4 = '<html><body><div id="email" style="font-family: century gothic;font-size: 16px;">
     <h2>Hi '.$d1['name'].',</h2>
     <p>Product:'.$desc.'</p>
-    <p>Transaction ID: .'.$tid.'</p>
+    <p>Transaction ID: '.$tid.'</p>
     <p>Amount credited:Rs.'.$credit1.'</p>
     <h3>Total Balance: Rs.'.$updatedbalancevend.'</h3>
     <p>Thank you,<br/>
