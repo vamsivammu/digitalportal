@@ -52,7 +52,7 @@ $routeProvider.when('/',{
 }).when('/groupview',{
     templateUrl:"groupofstuds.html",
     controller:'groups'
-}).otherwise({redirectTo:'/portal'})
+}).otherwise({redirectTo:'/2019/portal'})
 
 $locationProvider.html5Mode({enabled:true,requireBase:true})
 
@@ -92,7 +92,7 @@ $scope.submit=function(){
             // $window.location.href=response.data.user;
 
             registered= true;
-            window.location.pathname="/portal/loginafterreg"
+            window.location.pathname="/2019/portal/loginafterreg"
             $scope.vis=false;
         }else{
           
@@ -103,7 +103,7 @@ $scope.submit=function(){
 
 }
 $scope.signinpage=function(){
-  $window.location.href="/portal/loginafterreg"
+  $window.location.href="/2019/portal/loginafterreg"
 }
 
 })
@@ -141,7 +141,7 @@ y.controller("student",function($scope,$window,$http,$uibModal){
         url:'getstudent.php'
     }).then(function(resp){
         if(resp.data.email==null){
-            $window.location.href="/portal/loginafterreg"
+            $window.location.href="/2019/portal/loginafterreg"
         }else{
         $scope.data={
             name:resp.data.name,
@@ -176,17 +176,17 @@ y.controller("student",function($scope,$window,$http,$uibModal){
                     url:'stulogout.php'
                 }).then(function(resp){
                     registered=false
-                    $window.location.href='/portal/loginafterreg'
+                    $window.location.href='/2019/portal/loginafterreg'
                 })
         }
 $scope.offers=function(){
-    $window.location.href="/portal/carouselvendors"
+    $window.location.href="/2019/portal/carouselvendors"
 }
 $scope.listoftransactions=function(){
-    $window.location.href="/portal/studtransactions"
+    $window.location.href="/2019/portal/studtransactions"
 }
 $scope.pending=function(){
-    $window.location.href="/portal/pendingstu"
+    $window.location.href="/2019/portal/pendingstu"
   } 
         
         
@@ -231,13 +231,13 @@ y.controller('carouseloffers',function($scope,$http,$window,$uibModal){
         location.reload(true)
     }
     $scope.home=function(){
-        $window.location.href="/portal/student"
+        $window.location.href="/2019/portal/student"
     }
     $scope.listoftransactions=function(){
-        $window.location.href="/portal/studtransactions"
+        $window.location.href="/2019/portal/studtransactions"
     }
     $scope.pending=function(){
-        $window.location.href="/portal/pendingstu"
+        $window.location.href="/2019/portal/pendingstu"
       }
     $scope.logout = function(){
         $http({
@@ -245,7 +245,7 @@ y.controller('carouseloffers',function($scope,$http,$window,$uibModal){
             url:'stulogout.php'
         }).then(function(resp){
             registered=false
-            $window.location.href='/portal/loginafterreg'
+            $window.location.href='/2019/portal/loginafterreg'
         })
 }
 
@@ -262,7 +262,7 @@ $scope.selectvendor=function(q){
     }).then(function(response){
         
             if(response.data.status==1){
-                $window.location.href="/portal/specificvendoroffers"
+                $window.location.href="/2019/portal/specificvendoroffers"
             }
         
     })
@@ -365,18 +365,18 @@ y.controller("payment",function($scope,$window,$http,$uibModal){
     },3000)
   
 $scope.home=function(){
-    $window.location.href="/portal/student";
+    $window.location.href="/2019/portal/student";
 }
 $scope.offers=function(){
-    $window.location.href="/portal/carouselvendors"
+    $window.location.href="/2019/portal/carouselvendors"
 }
 
 
 $scope.listoftransactions=function(){
-    $window.location.href="/portal/studtransactions"
+    $window.location.href="/2019/portal/studtransactions"
 }
 $scope.pending=function(){
-  $window.location.href="/portal/pendingstu"
+  $window.location.href="/2019/portal/pendingstu"
 }
 $scope.logout=function(){
 
@@ -385,7 +385,7 @@ $scope.logout=function(){
         url:'stulogout.php'
     }).then(function(){
         registered=false
-        $window.location.href="/portal/loginafterreg"
+        $window.location.href="/2019/portal/loginafterreg"
 
     })
 
@@ -484,13 +484,13 @@ y.controller("stutransactions",function($scope,$http,$window,$uibModal){
     //     })
     // },1000)
 $scope.home=function(){
-    $window.location.href="/portal/student";
+    $window.location.href="/2019/portal/student";
 }
 $scope.offers=function(){
-    $window.location.href="/portal/carouselvendors"
+    $window.location.href="/2019/portal/carouselvendors"
 }
 $scope.pending=function(){
-  $window.location.href="/portal/pendingstu"
+  $window.location.href="/2019/portal/pendingstu"
 }
 $scope.paypop=function(){
      
@@ -514,7 +514,7 @@ $scope.logout=function(){
         url:'stulogout.php'
     }).then(function(r){
         registered=false
-        $window.location.href="/portal/loginafterreg"
+        $window.location.href="/2019/portal/loginafterreg"
 
     })
 
@@ -545,10 +545,10 @@ y.controller("pendingstutransac",function($scope,$http,$window,$uibModal){
     //     })
     // },1000)
 $scope.home=function(){
-    $window.location.href="/portal/student";
+    $window.location.href="/2019/portal/student";
 }
 $scope.offers=function(){
-    $window.location.href="/portal/carouselvendors"
+    $window.location.href="/2019/portal/carouselvendors"
 }
 
 $scope.paypop=function(){
@@ -563,7 +563,7 @@ $scope.paypop=function(){
 
 }
 $scope.listoftransactions=function(){
-    $window.location.href="/portal/studtransactions"
+    $window.location.href="/2019/portal/studtransactions"
 }
 $scope.pending=function(){
     location.reload(true)
@@ -575,7 +575,7 @@ $scope.logout=function(){
         url:'stulogout.php'
     }).then(function(r){
         registered=false
-        $window.location.href="/portal/loginafterreg"
+        $window.location.href="/2019/portal/loginafterreg"
 
     })
 
@@ -599,19 +599,19 @@ y.controller("vendor",function($scope,$http,$window,$uibModal){
          }
     })
     $scope.listoffers=function(){
-     $window.location.href="/portal/offerlist"   
+     $window.location.href="/2019/portal/offerlist"   
     }
     $scope.home=function(){
         
-        $window.location.href="/portal/vendor";
+        $window.location.href="/2019/portal/vendor";
     
     }
     $scope.listoftransactions=function(){
-        $window.location.href="/portal/vendortransactions"
+        $window.location.href="/2019/portal/vendortransactions"
        
     }
     $scope.pending=function(){
-        $window.location.href="/portal/pendingvend"
+        $window.location.href="/2019/portal/pendingvend"
        
     }
     
@@ -621,7 +621,7 @@ y.controller("vendor",function($scope,$http,$window,$uibModal){
                 url:'vendorlogout.php'
             }).then(function(resp){
                 registered=false
-                $window.location.href='/portal/loginafterreg'
+                $window.location.href='/2019/portal/loginafterreg'
             })
 }
 $scope.addoffers=function(){
@@ -667,18 +667,18 @@ y.controller("vendortransactions",function($scope,$http,$window,$uibModal){
     },1000)
 
 $scope.home=function(){
-    $window.location.href="/portal/vendor";
+    $window.location.href="/2019/portal/vendor";
 }
 
 $scope.listoffers=function(){
-    $window.location.href="/portal/offerlist"   
+    $window.location.href="/2019/portal/offerlist"   
    }
 
 $scope.listoftransactions=function(){
     location.reload(true);
 }
 $scope.pending=function(){
-    $window.location.href="/portal/pendingvend"
+    $window.location.href="/2019/portal/pendingvend"
    
 }
 
@@ -689,7 +689,7 @@ $scope.logout=function(){
         url:'vendorlogout.php'
     }).then(function(){
         registered=false
-        $window.location.href="/portal/loginafterreg"
+        $window.location.href="/2019/portal/loginafterreg"
     })
 
 }
@@ -714,15 +714,15 @@ y.controller("pendingvendtransac",function($scope,$http,$window,$uibModal){
     },4000)
 
 $scope.home=function(){
-    $window.location.href="/portal/vendor";
+    $window.location.href="/2019/portal/vendor";
 }
 
 $scope.listoffers=function(){
-    $window.location.href="/portal/offerlist"   
+    $window.location.href="/2019/portal/offerlist"   
    }
 
 $scope.listoftransactions=function(){
-$window.location.href="/portal/vendortransactions"
+$window.location.href="/2019/portal/vendortransactions"
 }
 
 $scope.pending=function(){
@@ -793,7 +793,7 @@ $scope.logout=function(){
         url:'vendorlogout.php'
     }).then(function(){
         registered=false
-        $window.location.href="/portal/loginafterreg"
+        $window.location.href="/2019/portal/loginafterreg"
     })
 
 }
@@ -841,11 +841,11 @@ y.controller("offercontroller",function($window,$scope,$http,$uibModal){
                 })
     }
     $scope.listoftransactions=function(){
-        $window.location.href="/portal/vendortransactions"
+        $window.location.href="/2019/portal/vendortransactions"
        
     }
     $scope.pending=function(){
-        $window.location.href="/portal/pendingvend"
+        $window.location.href="/2019/portal/pendingvend"
        
     }
     
@@ -853,7 +853,7 @@ y.controller("offercontroller",function($window,$scope,$http,$uibModal){
         location.reload(true);   
        }
     $scope.home=function(){
-        $window.location.href="/portal/vendor";
+        $window.location.href="/2019/portal/vendor";
     }
     $scope.logout = function(){  
         $http({
@@ -861,7 +861,7 @@ y.controller("offercontroller",function($window,$scope,$http,$uibModal){
             url:'vendorlogout.php'
         }).then(function(resp){
             registered=false
-            $window.location.href='/portal/loginafterreg'
+            $window.location.href='/2019/portal/loginafterreg'
         })
 }
 
@@ -880,10 +880,10 @@ y.controller("finteam",function($scope,$http,$window,$uibModal){
         balance : resp.data.balance
      } })
      $scope.home=function(){
-        if($window.location.href=="/portal/finteam"){
+        if($window.location.href=="/2019/portal/finteam"){
             location.reload(true);
         }
-        $window.location.href="/portal/finteam";
+        $window.location.href="/2019/portal/finteam";
     
     }
     $scope.offers=function(){
@@ -905,7 +905,7 @@ y.controller("finteam",function($scope,$http,$window,$uibModal){
                 })
     }
     $scope.listoftransactions=function(){
-        $window.location.href="/portal/fintransactions";
+        $window.location.href="/2019/portal/fintransactions";
     }
     $scope.pg=function(){
         $scope.modalInstance=$uibModal.open({
@@ -937,7 +937,7 @@ y.controller("finteam",function($scope,$http,$window,$uibModal){
         
     }
     $scope.listofstudents=function(){
-        $window.location.href="/portal/studentslist";
+        $window.location.href="/2019/portal/studentslist";
     }
     $scope.groupview=function(){
         $scope.modalInstance=$uibModal.open({
@@ -957,7 +957,7 @@ y.controller("finteam",function($scope,$http,$window,$uibModal){
                 url:'finlogout.php'
             }).then(function(resp){
                 registered=false
-                $window.location.href='/portal/loginafterreg'
+                $window.location.href='/2019/portal/loginafterreg'
             })
 
             $scope.pg=function(){
@@ -1050,7 +1050,7 @@ y.controller("listcontroller",function($scope,$http,$window,$uibModal){
        location.reload(true);
     }
     $scope.home=function(){      
-        $window.location.href="/portal/finteam";
+        $window.location.href="/2019/portal/finteam";
     }
     $scope.addoffers=function(){
         $scope.modalInstance=$uibModal.open({
@@ -1071,7 +1071,7 @@ y.controller("listcontroller",function($scope,$http,$window,$uibModal){
                 })
     }
     $scope.listoftransactions=function(){
-        $window.location.href="/portal/fintransactions";
+        $window.location.href="/2019/portal/fintransactions";
     }
     $scope.cg=function(){
         $scope.modalInstance=$uibModal.open({
@@ -1121,7 +1121,7 @@ $scope.pg=function(){
             url:'finlogout.php'
         }).then(function(resp){
             registered=false
-            $window.location.href='/portal/loginafterreg'
+            $window.location.href='/2019/portal/loginafterreg'
         })
 
     }
@@ -1140,7 +1140,7 @@ $scope.go=function(){
     }).then(function(r){
             if(r.data.status==1){
                 $scope.$dismiss('close')
-                $window.location.href="/portal/offerfin"
+                $window.location.href="/2019/portal/offerfin"
             }
     })
 }
@@ -1163,7 +1163,7 @@ y.controller("addingoffer",function($scope,$http,$window){
             console.log(r.data)
             if(r.data.status==1){
                 $scope.$dismiss('close')
-                $window.location.href="/portal/offerfin"
+                $window.location.href="/2019/portal/offerfin"
             }
         })
     }
@@ -1190,11 +1190,11 @@ y.controller("offercontrollerfin",function($scope,$http,$window,$uibModal){
         })
     },3000)
     $scope.home=function(){
-        $window.location.href="/portal/finteam";
+        $window.location.href="/2019/portal/finteam";
     }
 
     $scope.listofstudents=function(){
-        $window.location.href="/portal/studentslist"
+        $window.location.href="/2019/portal/studentslist"
     }
     $scope.addoffers=function(){
         $scope.modalInstance=$uibModal.open({
@@ -1206,7 +1206,7 @@ y.controller("offercontrollerfin",function($scope,$http,$window,$uibModal){
                 })
     }
     $scope.listoftransactions=function(){
-        $window.location.href="/portal/fintransactions"
+        $window.location.href="/2019/portal/fintransactions"
     }
     $scope.cg=function(){
         $scope.modalInstance=$uibModal.open({
@@ -1312,7 +1312,7 @@ y.controller("offercontrollerfin",function($scope,$http,$window,$uibModal){
             url:'finlogout.php'
         }).then(function(resp){
             registered=false
-            $window.location.href='/portal/loginafterreg'
+            $window.location.href='/2019/portal/loginafterreg'
         })
 }
 })
@@ -1404,11 +1404,11 @@ y.controller("groups",function($scope,$http,$window,$uibModal){
         $scope.groupname=r.data.groupname
     })
     $scope.home=function(){
-        $window.location.href="/portal/finteam";
+        $window.location.href="/2019/portal/finteam";
     }
 
     $scope.listofstudents=function(){
-        $window.location.href="/portal/studentslist"
+        $window.location.href="/2019/portal/studentslist"
     }
     $scope.addoffers=function(){
         $scope.modalInstance=$uibModal.open({
@@ -1420,7 +1420,7 @@ y.controller("groups",function($scope,$http,$window,$uibModal){
                 })
     }
     $scope.listoftransactions=function(){
-        $window.location.href="/portal/fintransactions"
+        $window.location.href="/2019/portal/fintransactions"
     }
     $scope.cg=function(){
         $scope.modalInstance=$uibModal.open({
@@ -1478,7 +1478,7 @@ y.controller("groups",function($scope,$http,$window,$uibModal){
             url:'finlogout.php'
         }).then(function(resp){
             registered=false
-            $window.location.href='/portal/loginafterreg'
+            $window.location.href='/2019/portal/loginafterreg'
         })
 }
 })
@@ -1506,7 +1506,7 @@ y.controller("groupofstuds",function($scope,$http,$window){
 
             if(r.data.status==1){
                 $scope.$dismiss('close')
-                $window.location.href="/portal/groupview"
+                $window.location.href="/2019/portal/groupview"
             }
 
 
@@ -1540,7 +1540,7 @@ y.controller("addmember",function($scope,$http,$window,$uibModal){
             console.log(r)
             if(r.data.status==1){
                 $scope.$dismiss('close')
-                // $window.location.href="/portal/specificgroup"
+                // $window.location.href="/2019/portal/specificgroup"
             }
             if($scope.status==-1){
                 $scope.resp="Error adding the member"
@@ -1574,11 +1574,11 @@ setInterval(function(){
     })
 },2000)
     $scope.home=function(){
-        $window.location.href="/portal/finteam";
+        $window.location.href="/2019/portal/finteam";
     }
 
     $scope.listofstudents=function(){
-        $window.location.href="/portal/studentslist"
+        $window.location.href="/2019/portal/studentslist"
     }
     $scope.addoffers=function(){
         $scope.modalInstance=$uibModal.open({
@@ -1639,7 +1639,7 @@ setInterval(function(){
             url:'finlogout.php'
         }).then(function(resp){
             registered=false
-            $window.location.href='/portal/loginafterreg'
+            $window.location.href='/2019/portal/loginafterreg'
         })
 }
 

@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $messages['email']=$a['email'];
             $messages['balance']=$a['balance'];
             
-            $messages['user']='/portal/student';
+            $messages['user']='/2019/portal/student';
             $messages["status"] = 1;
            // header('Location: student.html');
         }else {
@@ -82,7 +82,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $messages['email']=$a['email'];
             $messages['balance']=$a['balance'];
             
-            $messages['user']='/portal/finteam';
+            $messages['user']='/2019/portal/finteam';
             $messages["status"] = 1;
            // header('Location: student.html');
         }else {
@@ -122,7 +122,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $messages['email']=$a['email'];
             $messages['balance']=$a['balance'];
             
-            $messages['user']='/portal/vendor';
+            $messages['user']='/2019/portal/vendor';
             $messages["status"] = 1;
            // header('Location: student.html');
         }else {
