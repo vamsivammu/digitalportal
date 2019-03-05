@@ -1,0 +1,17 @@
+
+<div class="container">
+    
+       <div class="modal-body" id="modal-body">
+    
+            <input col-sm-5 placeholder="Enter Amount" class="form-control" ng-model="amount">
+       
+       </div>
+       <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="pay()">Pay</button>&nbsp
+        <button class="btn btn-danger" type="button" ng-click="close()">Cancel</button>
+        
+    </div>
+       <div ng-show="status==0"  class="card-text" style="color: red;">
+           <h5 class="card-text text-center">{{msg}}</h5>
+       </div>
+    </div>

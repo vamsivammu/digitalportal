@@ -1,0 +1,86 @@
+<style>
+  
+   table{
+       text-align: center;
+   }
+</style>
+    <div class="navigationbar">
+                 
+      
+   <nav class="navbar fixed-top navbar-expand-lg bg-primary">
+           
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="sr-only" style="float: right;">Toggle navigation </span>
+               <span class="navbar-toggler-icon"></span>
+             <span class="navbar-toggler-icon"></span>
+             <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav">
+                 <li class="nav-item ">
+                   <a style="color: lawngreen" class="nav-link" ng-click="home()">Home </a>
+                 </li>
+                 <li class="nav-item ">
+                   <a style="color: lawngreen" class="nav-link " ng-click="listofstudents()">Students</a>
+                 </li>
+                 <li class="nav-item ">
+                   <a style="color: lawngreen" class="nav-link" ng-click="listoftransactions()">Transactions</a>
+                 </li> 
+                 <li class="nav-item">
+                     <a style="color: lawngreen" class="nav-link" ng-click="offers()">Offers</a>
+                   </li>
+                 <li class="nav-item">
+                     <a style="color: lawngreen" class="nav-link" ng-click="addoffers()">Add Offer</a>
+                   </li>
+                   <li class="nav-item active">
+                     <a style="color: lawngreen" class="nav-link" ng-click="groupview()">Groups</a>
+                   </li>
+                   <li class="nav-item">
+                     <a style="color: lawngreen" class="nav-link" ng-click="cg()">Create Group</a>
+                   </li>
+                   <li class="nav-item">
+                     <a style="color: lawngreen" class="nav-link" ng-click="am()">Add Member</a>
+                   </li>
+                   <li class="nav-item">
+                     <a style="color: lawngreen" class="nav-link" ng-click="pg()">Pay to Group</a>
+                   </li>
+                 <li class="nav-item">
+                   <a style="color: lawngreen" class="nav-link " ng-click="logout()">Logout</a>
+                 </li>
+               </ul>
+             </div>
+           </nav>
+           </div>
+<div class="container">
+
+       <br><br><br><br>
+       <table class="table table-hover">
+
+               <thead>
+                   <tr>
+                       <th align="center" scope="col">S.no</th>
+                       <th align="center" scope="col">Username</th>
+                       <th align="center" scope="col">Balance</th>
+                       <th align="center" scope="col">Group</th>
+                        
+                       
+                   </tr>
+               </thead>
+   
+               <tbody>
+   
+                   <tr ng-repeat="data in userdata">
+                           <th scope="row">{{$index+1}}</th>    
+                           <td align="center">{{data.userid}}</td>
+                           <td align="center">{{data.balance}}</td>
+                           <td align="center">{{groupname}}</td>
+                           
+                           </tr>
+   
+               </tbody>
+   
+   
+       </table>
+
+
+</div>

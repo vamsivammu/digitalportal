@@ -1,0 +1,96 @@
+<style>
+     /* @import url("assets/css/material-kit.css?v=2.0.4");  */
+        /* @import url("css/mdb.css"); */
+    table{
+        text-align: center;
+    }
+</style>
+      <div class="navigationbar">
+                  
+        <!-- <link rel="stylesheet" href="css/bootstrap.css">
+        <link href="assets/css/material-kit.css?v=2.0.4" rel="stylesheet" /> -->
+    <nav class="navbar fixed-top navbar-expand-lg bg-primary">
+            
+              <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="sr-only" style="float: right;">Toggle navigation </span>
+                <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item ">
+                    <a style="color: lawngreen" class="nav-link" ng-click="home()">Home </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a style="color: lawngreen" class="nav-link " ng-click="listofstudents()">Students</a>
+                  </li>
+                  <li class="nav-item">
+                    <a style="color: lawngreen" class="nav-link" ng-click="listoftransactions()">Transactions</a>
+                  </li> 
+                  <li class="nav-item">
+                      <a style="color: lawngreen" class="nav-link" ng-click="offers()">Offers</a>
+                    </li>
+                  <li class="nav-item">
+                      <a style="color: lawngreen" class="nav-link" ng-click="addoffers()">Add Offer</a>
+                    </li>
+                    <li class="nav-item">
+                      <a style="color: lawngreen" class="nav-link" ng-click="groupview()">Groups</a>
+                    </li>
+                    <li class="nav-item">
+                      <a style="color: lawngreen" class="nav-link" ng-click="cg()">Create Group</a>
+                    </li>
+                    <li class="nav-item">
+                      <a style="color: lawngreen" class="nav-link" ng-click="am()">Add Member</a>
+                    </li>
+                  <li class="nav-item">
+                    <a style="color: lawngreen" class="nav-link " ng-click="logout()">Logout</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            </div>
+    <br><br><br><br>
+<div class="container">
+
+    <table class="table table-hover">
+
+            <thead>
+                <tr>
+                    <th align="center" scope="col">S.no</th>
+                    <th align="center" scope="col">Name</th>
+                    <th align="center" scope="col">Username</th>
+                    <th align="center" scope="col">Email</th>
+                    <th align="center" scope="col">Balance</th>
+                    <th align="center" scope="col">Action</th>
+                    
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr ng-repeat="student in students track by $index"  ng-click="select(student.username)">
+                        <th  scope="row">{{$index+1}}</th>    
+                        <td align="center">{{student.name}}</td>
+                        <td align="center">{{student.username}}</td>
+                        <td align="center">{{student.email}}</td>
+                        <td align="center">{{student.balance}}</td>
+                        
+                        <!-- <td align="center"><button class="btn btn-success" ng-show="student.selected" ng-click="change(student.selected)" >Selected</button></td> -->
+                        <td align="center"><button class="btn btn-danger" id={{student.username}}>Not Selected</button></td>
+                        
+                    </tr>
+                 
+            </tbody>
+
+
+    </table>
+      <button class=" btn btn-primary" style="display: block;margin: 0 auto"  ng-disabled="selectedemails.length==0" ng-click="distribute()">Distribute</button>
+    
+
+
+
+
+
+</div>

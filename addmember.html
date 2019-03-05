@@ -1,0 +1,28 @@
+<style>
+
+    
+
+</style>
+<div class="container">
+<div class="modal-header" >
+    <h3 class="modal-title text-center" id="modal-title">Adding a New Member </h3>
+   </div>
+   <div class="modal-body" id="modal-body">
+        <p>Select Group:</p><span><select   name="groupname" class="form-control" ng-model="groupname">
+            <option ng-repeat="a in groups">{{a}}</option>
+           
+        </select></span><br>
+        <p><bold>Member ID:</bold></p><span><input  placeholder="Enter the userid" name="membername" class="form-control" ng-model="membername">
+        </span>
+        
+    </div>
+   <div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="submit()">Add</button>
+    &nbsp<button class="btn btn-danger" type="button" ng-click="close()">Cancel</button>
+    
+</div>
+   <div ng-show="status==0 || status==2"  class="card-text" style="color: red;">
+       <h5 class="card-text text-center">{{resp}}</h5>
+   </div>
+   
+</div>

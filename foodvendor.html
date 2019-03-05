@@ -1,0 +1,103 @@
+
+      
+ <div  style="background-image: url(vendor.jpg);background-size: cover;background-repeat: no-repeat;height:100%;"  >
+        
+            <div class="navigationbar">
+           
+                <nav class="navbar fixed-top navbar-expand-lg bg-primary">
+                        
+                          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="sr-only" style="float: right;">Toggle navigation </span>
+                            <span class="navbar-toggler-icon"></span>
+                          <span class="navbar-toggler-icon"></span>
+                          <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                              <li class="nav-item active">
+                                <a style="color: lawngreen" class="nav-link" ng-click="home()">Home </a>
+                              </li>
+                              <li class="nav-item">
+                                <a style="color: lawngreen" class="nav-link" ng-click="listoftransactions()">Transactions</a>
+                              </li>
+                              <li class="nav-item ">
+                                    <a style="color: lawngreen" class="nav-link" ng-click="pending()">Pending Transactions</a>
+                                  </li>
+                               
+                              <li class="nav-item">
+                                    <a style="color: lawngreen" class="nav-link" ng-click="listoffers()">Offers</a>
+                                  </li>
+                              <li class="nav-item">
+                                <a style="color: lawngreen" class="nav-link " ng-click="logout()">Logout</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </nav>
+                        </div>
+        
+
+        <br><br>
+
+
+          
+      <br><br><br>
+      <div class="container-fluid" >          
+                   
+            <div class="animated fadeInUp" style="float: none;padding: 0;margin: 0 auto;width: 18rem">
+                <div class="card-container ">
+                        <div class="card card-nav-tabs " >
+                            <div class="front">
+                                <div class="cover">
+                                    <img src="images/rotating_card_thumb2.png"/>
+                                </div>
+                                <div class="user">
+                                    <img class="img-circle" src="timlogo.png"/>
+                                </div>
+                                <div class="content">
+                                    <div class="main">
+                                        <h3 class="name">{{data.name}}</h3>
+                                <p class="profession">Food Vendor</p>
+
+                                    </div>
+                                    <div class="footer">
+                                        <div class="rating" >
+                                            CEA WEBOPS 2019
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- end front panel -->
+                            <div class="back">
+                              
+                               <div class="card-header card-header-info text-center">
+                                 <h3>Profile Page</h3>
+                               </div>
+                               
+                                <div class="content ">
+                                    <div class="main card-text text-center">
+                                        <div class="row no-gutters justify-content-center " >
+                                            <div class="col-xs-3" >
+                                                <p><strong>Name:</strong></p><br>
+                                                <p><strong>UserId:</strong></p><br>
+                                                <p><strong>Email:</strong></p><br>
+                                                <p><strong>Amount:</strong></p><br>
+                                            
+                                            </div>
+                                            <div class="col-xs-9" >
+                                                <p>{{data.name}}</p><br>
+                                                <p>{{data.username}}</p><br>
+                                                <p>{{data.email}}</p><br>
+                                                <p>{{data.balance}}</p><br>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div> <!-- end back panel -->
+                        </div> <!-- end card -->
+                    </div> <!-- end card-container -->
+                </div>
+            </div>
+
+  </div>

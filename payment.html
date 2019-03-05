@@ -1,0 +1,17 @@
+
+<div class="container">
+<div class="modal-header" >
+    <h3 class="modal-title" id="modal-title">Payment of Rs.{{pr}} </h3>
+   </div>
+   <div class="modal-body" id="modal-body">
+            Are you sure you want to pay Rs.{{pr}}?
+   </div>
+   <div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="confirm()">Confirm</button>&nbsp
+    <button class="btn btn-danger" type="button" ng-click="close()">Cancel</button>
+    
+</div>
+   <div ng-show="status==0"  class="card-text" style="color: red;">
+       <h5 class="card-text text-center">{{msg}}</h5>
+   </div>
+</div>

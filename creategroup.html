@@ -1,0 +1,24 @@
+<style>
+
+    
+
+</style>
+<div class="container">
+<div class="modal-header" >
+    <h3 class="modal-title text-center" id="modal-title">Adding a New Group </h3>
+   </div>
+   <div class="modal-body" id="modal-body">
+        
+     <p><bold>Group Name:</bold></p><span><input col-sm-5 placeholder="Enter Group Name" name="groupname" class="form-control" ng-model="groupname">
+        </span>
+        
+    </div>
+   <div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="submit()">Add</button>
+    &nbsp<button class="btn btn-danger" type="button" ng-click="close()">Cancel</button>
+    
+</div>
+   <div ng-show="status==0"  class="card-text" style="color: red;">
+       <h5 class="card-text text-center">The group already exists</h5>
+   </div>
+</div>

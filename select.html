@@ -1,0 +1,26 @@
+<style>
+
+    
+
+    </style>
+    <div class="container">
+    <div class="modal-header text-center" >
+        <h3 class="modal-title card-text text-center" id="modal-title">Offers </h3>
+       </div>
+       <div class="modal-body" id="modal-body">
+            <p>Select Vendor</p><span><select col-sm-5  name="vend" class="form-control" ng-model="vend">
+                <option>foodvendor1</option>
+                <option>foodvendor2</option>
+                <option>foodvendor3</option>
+            </select></span><br>
+         
+        </div>
+       <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="go()">Go</button>
+        &nbsp<button class="btn btn-danger" type="button" ng-click="close()">Close</button>
+        
+    </div>
+       <div ng-show="status==0"  class="card-text" style="color: red;">
+           <h5 class="card-text text-center"></h5>
+       </div>
+    </div>

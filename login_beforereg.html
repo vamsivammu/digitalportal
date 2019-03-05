@@ -1,0 +1,74 @@
+
+       
+               <div  style="background-image: url(login.jpg);background-size: cover;background-repeat: no-repeat;height: 100%;">
+            <div class="container"  >
+                
+                <br><br><br><br>
+                <div class="card animated pulse col-sm-4" style="margin: 0 auto; float: none;padding: 0;opacity: 0.7">
+                        <div class="card-header card-header-primary animated slideInLeft">
+        
+                                <h4 class="text-center">Login&nbsp<i class="fas fa-sign-in-alt"></i></h4>
+                            
+                            </div>
+        
+                    <div  class="card-body">
+                    
+                        <form name="person"  >
+                            <div class="form-group row justify-content-center">
+                                <div class="col-sm-10 animated slideInRight"><label><strong>Select:</strong></label></div>
+                            <div class="col-sm-10 animated slideInLeft">
+                                <select class="form-control" name="human"  ng-model="human" ng-required="true">
+                                <option>foodvendor</option>
+                                <option>student</option>
+                                <option>financial team</option>
+                            
+                            </select>
+                        </div>
+                            </div>
+                        <div class="form-group row justify-content-center"> 
+                                <div class="col-sm-10 animated slideInRight"><label><strong>Username:</strong></label></div>
+                                <div class="col-sm-10 animated slideInLeft">
+                        <input type="text" class="form-control" name="username" ng-required="true" ng-model="username" placeholder="username">
+                    </div>
+                    </div>
+                    <div class="form-group row justify-content-center">
+                            <div class="col-sm-10 animated slideInRight"><label><strong>Password:</strong></label></div>
+                        <div class="col-sm-10 animated slideInLeft">
+                            <input class="form-control" type="password" ng-required="true" ng-model="password" name="password" placeholder="password">
+                        </div>
+                        </div>
+                    
+                        <div class="form-group row justify-content-center" >
+                        <div class="col-sm-7 animated slideInRight">
+                        <button type="submit" ng-click="login()" style="background: purple" ng-disabled="person.$invalid" class="form-control btn  btn-round ">Login</button>
+                    </div>
+                    
+                        <div ng-show="status==0" class="col-sm-10">
+
+                            <small class="text-center card-text" style="color: red;font-size: 10px">{{messages}}</small>
+                        </div>
+
+                        <div  ng-show="reg" class="col-sm-10 animated  swing" >
+                            <br>
+                            <div class="animated hinge">
+                            <p style="background:lawngreen;border-radius:10px;font-size: 16px;" class="text-center card-text">Registered Successfully</p>
+                        </div>
+                        </div>        
+                    </div>
+                
+                
+                        
+                </form>
+        
+                    </div>
+                    <div class="footer text-center"><h4 >Don't have an Account? <a class="card-link" href="/portal">Register</a>.</h4></div>
+                </div>
+        
+            </div>
+        </div>
+           
+<!--         
+        </body>
+        
+
+</html> -->
